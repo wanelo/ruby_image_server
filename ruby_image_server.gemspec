@@ -4,11 +4,11 @@
 require File.expand_path('../lib/ruby_image_server/version', __FILE__)
 
 Gem::Specification.new do |gem|
-  gem.authors       = ['SET ME']
-  gem.email         = ['SET ME']
+  gem.authors       = ['Wanelo']
+  gem.email         = ['dev@wanelo.com']
   gem.licenses      = ['MIT']
-  gem.description   = 'I am an application stub'
-  gem.summary       = 'app stub'
+  gem.description   = 'Tools and libraries for interacting with the Wanelo Image Server'
+  gem.summary       = 'Tools and libraries for interacting with the Wanelo Image Server'
 
   gem.files         = `git ls-files`.split($OUTPUT_RECORD_SEPARATOR)
   gem.executables   = gem.files.grep(/^bin\//).map { |f| File.basename(f) }
@@ -23,6 +23,8 @@ Gem::Specification.new do |gem|
   gem.add_dependency('awesome_print', '~> 1.1.0')
   gem.add_dependency('abstract_type', '~> 0.0.7')
   gem.add_dependency('multi_json', '~> 1.10.1')
+  gem.add_dependency('aws-sdk', '~> 2')
+  gem.add_dependency('lapine')
 
   # development dependencies.
   gem.add_development_dependency('rspec', '~> 3.2')
