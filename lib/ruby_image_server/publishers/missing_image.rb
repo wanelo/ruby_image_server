@@ -3,8 +3,6 @@ module RubyImageServer
     class MissingImage
       include Lapine::Publisher
 
-      exchange 'images.missing'
-
       def initialize(namespace: nil, image_hash: nil)
         @namespace = namespace
         @image_hash = image_hash

@@ -25,6 +25,8 @@ module RubyImageServer
             connection: 'rabbitmq',
             type: 'topic'
           }
+
+        RubyImageServer::Publishers::MissingImage.exchange exchange
       end
     end
   end

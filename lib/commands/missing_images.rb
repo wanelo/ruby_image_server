@@ -13,7 +13,7 @@ class RubyImageServerCLI < Thor
     finder = RubyImageServer::S3::MissingImageFinder.new(bucket: bucket, base_path: path)
     finder.image_data.each do |datum|
       puts "Publishing: #{datum[:image_hash]}" if puts?
-      RubyImageServer::Publishers::MissingImage.new(namespace: datum[:namespace], image_hash: datum[:image_hash]).publish unless dry_run?
+      RubyImageServer::Publishers::MissingImage.new(namespace: datum[:namespace], image_hash: datum[:image_hash]).publish('images.missing') unless dry_run?
     end
     puts "Cleaning up..." if puts?
     finder.cleanup unless options[:dry_run]
