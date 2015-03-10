@@ -1,7 +1,7 @@
 require 'yaml'
 require 'lapine'
 
-Dir.glob(File.expand_path('../publishers', __FILE__)).each { |publisher| require publisher }
+Dir.glob(File.expand_path('../publishers/*.rb', __FILE__)).each { |publisher| require publisher }
 
 module RubyImageServer
   module Publishers
